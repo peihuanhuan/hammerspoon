@@ -19,13 +19,13 @@ rm -rf ~/.hammerspoon
 
 升级：
 ```
-cd ~/.hammerspoon && git pull
+cd ~/.hammerspoon && git pull origin master
 ```
 
 # 实现功能
 
 ## 快捷键调节系统音量
-『command + ↑』调高音量，『command + ↓』降低音量。
+『cmd + ↑』调高音量，『cmd + ↓』降低音量。
 ## 自动切换输入法
 能够记录此 App 中最近一次使用的输入法，切到别的 App 修改输入法后，再切回此 App 时，会自动切回上次记录的输入法。
 
