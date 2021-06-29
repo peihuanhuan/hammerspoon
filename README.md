@@ -32,7 +32,7 @@ cd ~/.hammerspoon && git pull origin master
 如果没有记录到最近使用的输入法，则使用配置的默认输入法： ~/.hammerspoon/autoSwitchInputMethod.lua 文件中，修改 app2Ime 变量，此变量中的 App 都会切换到英语，其余全部切换搜狗拼音。
 
 如果使用的其他输入法，也需要自行修改。
-> 不知道当前 App 叫什么，可以使用 cmd + ctrl + . 来查看当前 App 路径和输入法。
+> 不知道当前 App 或输入法叫什么，可以使用 cmd + ctrl + . 来查看当前 App 路径和输入法。
 
 
 
