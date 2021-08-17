@@ -72,6 +72,10 @@ local function Chinese()
       source = hs.keycodes.currentSourceID()
       app = hs.window.frontmostWindow():application():path()
 
+      if app == nil then
+        return
+      end
+
       appLastInputMethod[app] = source
 
       -- for key, value in pairs(appLastInputMethod) do      
