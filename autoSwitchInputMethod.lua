@@ -70,7 +70,11 @@ local function Chinese()
   hs.keycodes.inputSourceChanged(
     function ()
       source = hs.keycodes.currentSourceID()
-      app = hs.window.frontmostWindow():application():path()
+      application = hs.window.frontmostWindow():application()
+      if application == nil then
+        return
+      end
+      app = application:path()
 
       if app == nil then
         return

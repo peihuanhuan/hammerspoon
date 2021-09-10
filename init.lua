@@ -2,6 +2,7 @@ require "volume"
 require "autoSwitchInputMethod"
 require "autoReloadConfig"
 require "chrome"
+require "wifiWatcher"
 
 
 

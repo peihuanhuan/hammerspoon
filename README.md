@@ -34,6 +34,8 @@ cd ~/.hammerspoon && git pull origin master
 如果使用的其他输入法，也需要自行修改。
 > 不知道当前 App 或输入法叫什么，可以使用 cmd + ctrl + . 来查看当前 App 路径和输入法。
 
+## 切换网络调节音量
+`wifiWatcher.lua` 中修改公司、家庭 WiFi，当切换到该网络时自动调节音量。（也可以做些其他的，如关闭打开某些程序
 
 
 ## 其他自定义功能
