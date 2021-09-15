@@ -35,7 +35,11 @@ local function Chinese()
   
   function updateFocusAppInputMethod()
     local ime = 'Chinese'
-    local focusAppPath = hs.window.frontmostWindow():application():path()
+    application = hs.window.frontmostWindow():application()
+      if application == nil then
+        return
+      end
+    local focusAppPath = application:path()
     -- hs.alert.show(appLastInputMethod[focusAppPath])
 
     -- 使用上次记录到的输入法
