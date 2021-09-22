@@ -35,11 +35,8 @@ local function Chinese()
   
   function updateFocusAppInputMethod()
     local ime = 'Chinese'
-    application = hs.window.frontmostWindow():application()
-      if application == nil then
-        return
-      end
-    local focusAppPath = application:path()
+    
+    local focusAppPath = getApp()
     -- hs.alert.show(appLastInputMethod[focusAppPath])
 
     -- 使用上次记录到的输入法
@@ -64,6 +61,18 @@ local function Chinese()
         Chinese()
     end
   end
+
+  function getApp()
+    window = hs.window.frontmostWindow()
+    if window == nil then
+      return nil
+    end
+    application = window:application()
+    if application == nil then
+      return nil
+    end
+    return application:path()
+  end
   
   
   appWatcher = hs.application.watcher.new(applicationWatcher)
@@ -74,12 +83,8 @@ local function Chinese()
   hs.keycodes.inputSourceChanged(
     function ()
       source = hs.keycodes.currentSourceID()
-      application = hs.window.frontmostWindow():application()
-      if application == nil then
-        return
-      end
-      app = application:path()
-
+      
+      app = getApp()
       if app == nil then
         return
       end
@@ -90,8 +95,6 @@ local function Chinese()
       --   hs.alert.show(key .. ":  " .. value)
       -- end  
     
-
-
     end
   )
   
