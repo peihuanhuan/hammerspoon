@@ -1,5 +1,5 @@
 -- 家里的Wi-Fi名称
-homeWifis = {"CU_j7q4"}
+homeWifis = {"CMCC-p9ab"}
 
 -- 办公室的Wi-Fi名称
 officeWifi = {"Meituan", "Meituan-Test"}
